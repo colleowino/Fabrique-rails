@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   resources :devise
 
   resources :photos
-  resources :products
-  resources :comments
+  
+  resources :products do
+  	resources :comments
+  end
+  
 
   root to: 'products#index'
 end

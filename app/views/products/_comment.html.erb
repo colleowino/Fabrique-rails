@@ -1,0 +1,9 @@
+<div>
+  <h4><%= comment.author_name %> Says </h4>
+  <p class="comment"><%= comment.body %></p>
+  <% if comment.created_at > Time.now.beginning_of_day %>
+    <%="#{time_ago_in_words(comment.created_at)} ago"%>  
+<% else %>
+    <%= comment.created_at.strftime("%b %d, %Y") %> 
+<% end %>
+</div>
