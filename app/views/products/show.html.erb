@@ -1,4 +1,13 @@
 <p id="notice"><%= notice %></p>
+<p>
+
+<% if @product.image.exists? %>
+
+<p><%= image_tag @product.image.url %></p>
+
+<% end %>
+</p>
+
 
 <p>
   <strong>Title:</strong>
