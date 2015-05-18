@@ -1,0 +1,59 @@
+/*
+ *	main.css
+ * 	extra styling will be applied to this file
+ */
+
+#login_container{
+	font-family: 'Open Sans', sans-serif;
+	width: 30%;
+	margin: 70px auto;
+}
+
+#login_container h2 {
+	font-size: 28px;
+	text-align: center;
+	margin: 10% 0;
+}
+
+#login_container .form_container{
+	background-color: #F9FAFA;
+	padding: 30px 50px 80px;
+	margin: 30px 0;
+	border: 1px solid #e5e5e5;
+
+}
+
+.label{
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+
+#login_container .texty{
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	height: 30px;
+}
+
+.actions{
+	float: right;
+}
+
+.remember{
+	float: left;
+	font-size: 16px;
+	padding: 10px 0;
+}
+
+.right_button{
+	font-size: 18px;
+	color: #fff;
+	background-color: #7AB55C;
+	padding: 14px 30px;
+	border: 0px solid black;
+	border-radius: 3px;
+}
+
+.form_end{
+	margin: 30px 0;
+}
