@@ -18,3 +18,5 @@
 public/uploads
 tmp
 logs
+
+/public/system/products
