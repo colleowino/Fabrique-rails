@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+
+	searchkick
 	has_many :comments
 	has_many :photos
 	has_attached_file :image

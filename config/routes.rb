@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :photos
   
   resources :products do
+  	collection do
+  		get 'search'
+  	end
   	resources :comments
   end
   

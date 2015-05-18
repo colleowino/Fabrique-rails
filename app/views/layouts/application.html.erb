@@ -19,8 +19,14 @@
   <% else %>
     <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
     <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-  <% end %>
 
+     <% end %>
+     <% form_tag search_products_path, method: :get, role: "search" do %>
+       <p>
+         <%= text_field_tag :search, params[:search], class: "form-control" %>
+         <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
+       </p>
+       <% end %>
 <%= yield %>
 
 </body>

@@ -7,6 +7,15 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def search
+    if params[:search].present?
+      @products = Product.search(params[:search])
+      else
+        @products = Product.all
+      end
+    
+  end
+
   # GET /products/1
   # GET /products/1.json
   def show
