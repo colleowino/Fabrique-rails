@@ -8,7 +8,7 @@
       
        <div class="col-md-4">
         <% if product.image.exists? %>
-        <%= image_tag product.image %>
+        <%= image_tag product.image ,:class => 'main_img'%>
         <% end %>
        
         <td><%= product.price %></td>
