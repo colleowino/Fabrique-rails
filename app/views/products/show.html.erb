@@ -3,7 +3,7 @@
 
 <% if @product.image.exists? %>
 
-<p><%= image_tag @product.image.url %></p>
+<p><%= image_tag @product.image.url, :class => 'main_img'%></p>
 
 <% end %>
 </p>
