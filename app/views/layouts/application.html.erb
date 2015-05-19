@@ -8,54 +8,125 @@
   <%= stylesheet_link_tag    '/main.css', media: 'all' %>
   <%= stylesheet_link_tag    'http://fonts.googleapis.com/css?family=Open+Sans', media: 'all' %>
 </head>
+
 <body>
-<% if user_signed_in? %>
-  <div id="nav_container">
-      <nav>
-          <div class="logo">
-              <h3>Geekosh</h3>
-          </div>
-          <div class="search_form">
-              <form action="">
-                  <input type="text">
-                  <input type="submit" value="search">
-              </form>
-          </div>
-          <div class="categories">
+
+<div class="container">
+
+       
+    
+
+          <div class="row" id="nav_container">
               
-          </div>
-          <div class="menu_links">
-              <span class="home">
-                  <%= link_to "home", root_url, :class => 'navbar-link'  %>
-              </span>
-              <span class="you">
-                  <%= link_to current_user.first_name, edit_user_registration_path, :class => 'navbar-link' %> 
-              </span>
-              <span class="contact">
-                  <a href="">contact us</a>
-              </span>
-              <span class="logout">
-                  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-              </span>
-          </div>
-      </nav>
+                  <div class="col-md-2" id="logo">
+                      <h2>Geekosh</h2>
+                  </div>
+
+                  
+                  <div class="search_form col-md-4">
+                      <form action="">
+                          <input type="text">
+                          <input type="submit" value="search">
+                      </form>
+                  </div>
+
+
+
+                    <div class="menu_links col-md-6">
+                     <ul>
+                          <li class="home">
+                              <%= link_to "home", root_url, :class => 'navbar-link'  %>
+                          </li>
+
+                  
+                              <% if user_signed_in? %>
+                          <li class="home">
+                           <%= link_to 'Sell', new_product_path %>
+
+                           </li>
+
+                            <li class="home">
+                          <%= link_to current_user.first_name, edit_user_registration_path, :class => 'navbar-link' %> 
+                           </li>
+                      
+                            <li class="home">
+                                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+                            </li>
+
+                          
+                          <% else %>   
+                    
+                          <li class="home">
+                            <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+                            <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+
+                          </li>
+
+                   
+                        <% end %>
+                         <li class="home">
+                              <a href="">contact us</a>
+                        </li>
+                     </ul>
+                       
+               </div>
+        </div>
   </div>
- <% end %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
-<% if !user_signed_in? %>
-  <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
+  <div class="container row col-md-12">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
-  <p class="navbar-text pull-right">
-    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
   </div>
-</nav>
-<% end %>
-  
-<%= yield %>
 
+
+   <%= yield %> 
+    
+
+
+
+<div class="container" id="footers">
+  <footer>
+    <div class="row">
+
+           <div class="col-md-12 socials"> 
+
+               <a href="https://www.twitter.com/">
+                    <img src="/skype.png">
+               </a>
+
+            
+
+              <a href="https://www.facebook.com/?_rdr">
+                 <img src="/facebook.png">
+              </a>
+
+              <a href="https://plus.google.com/">
+                 <img src="/g_plus.png">
+              </a>
+
+              <a href="http://www.skype.com/en/">
+                 <img src="/skype.png">
+              </a>
+
+          
+            
+          </div>
+         </div>
+
+
+
+        <div class="row">
+            <div class="col-md-12 copyright_part">    
+              <p> 
+                 &copy Cliff & Justus-2015
+              </p>
+            
+
+              
+            </div>  
+         </div>
+  </footer>
+</div>
 </body>
 </html>

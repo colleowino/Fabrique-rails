@@ -1,29 +1,44 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
-<h1>Listing Products</h1>
+<div class="container" >
 
+     <div class="row shadow">
 
-  
+            <div class="col-md-6" id="home1">
+               <h2> ipsum dolor sit amet, <br/>consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore  <br/>dolore magna aliqua.Ut enim ad minim veniam,
+              </h2>
+          
+            </div>
+
+            <div class="col-md-6" id="homes"></div>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row products shadow">
+
     <% @products.each do |product| %>
       
-       <div class="col-md-4">
+       <div class="col-md-4 product">
         <% if product.image.exists? %>
         <%= image_tag product.image ,:class => 'main_img'%>
         <% end %>
        
-        <td><%= product.price %></td>
-        <td><%= product.description %></td>
-        <td><%= product.category %></td>
-        <td><%= product.status %></td>
-        <td><%= product.drop_off_point %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <p><%= product.price %></p>
+        
+        <p><%= product.status %></p>
+       
+        <p><%= link_to 'Show', product %></p>
+        
+
+      </div>
+
     <% end %>
+
   </div>
+</div>
 
 
-<br>
 
-<%= link_to 'New Product', new_product_path %>
+

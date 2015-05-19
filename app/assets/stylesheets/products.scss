@@ -1,3 +1,38 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.product{
+	display: inline-block;
+	
+}
+
+#homes{
+	background-image: url("/home.jpg");
+	min-height: 500px;
+	background-size:cover;
+   background-repeat: no-repeat;
+
+
+}
+
+#home1{
+	background-color: #F2F3F7;
+	min-height: 500px;
+	background-size:cover;
+   background-repeat: no-repeat;
+   text-align:center;
+
+   padding-top: 10%;
+
+
+}
+
+.products{
+	padding: 2% 0;
+}
+
+.shadow{
+	border-bottom-style:groove;
+	border-bottom-width: 1px;
+}
