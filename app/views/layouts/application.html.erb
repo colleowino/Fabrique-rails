@@ -7,40 +7,32 @@
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    '/main.css', media: 'all' %>
   <%= stylesheet_link_tag    'http://fonts.googleapis.com/css?family=Open+Sans', media: 'all' %>
+  <%= stylesheet_link_tag    '/main.css', media: 'all' %>
+
+    <link rel="stylesheet" href="/semantic.min.css">
+  <link rel="stylesheet" href="/packed_global.css">
 </head>
-
 <body>
-
 <div class="container">
+  <div class="row" id="nav_container">
+    <div class="col-md-2" id="logo">
+        <h2>Fabrique</h2>
+    </div>
+    <div class="search_form">
+        <form action="">
+            <input type="text">
+            <input type="submit" value="search">
+        </form>
+    </div>
+            <div class="menu_links col-md-6">
+             <ul>
+                  <li class="home">
+                      <%= link_to "home", root_url, :class => 'navbar-link'  %>
+                  </li>
 
-       
-    
-
-          <div class="row" id="nav_container">
-              
-                  <div class="col-md-2" id="logo">
-                      <h2>Geekosh</h2>
-                  </div>
-
-                  
-                  <div class="search_form col-md-4">
-                      <form action="">
-                          <input type="text">
-                          <input type="submit" value="search">
-                      </form>
-                  </div>
-
-
-
-                    <div class="menu_links col-md-6">
-                     <ul>
-                          <li class="home">
-                              <%= link_to "home", root_url, :class => 'navbar-link'  %>
-                          </li>
-
-                  
-                              <% if user_signed_in? %>
-                          <li class="home">
+          
+                      <% if user_signed_in? %>
+                  <li class="home">
                            <%= link_to 'Sell', new_product_path %>
 
                            </li>
@@ -64,9 +56,7 @@
 
                    
                         <% end %>
-                         <li class="home">
-                              <a href="">contact us</a>
-                        </li>
+
                      </ul>
                        
                </div>

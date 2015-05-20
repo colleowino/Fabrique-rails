@@ -36,8 +36,6 @@ body{
 
 #nav_container{
 	padding: 10px 0;
-	border-bottom-style:groove;
-	border-bottom-width: 1px;
 	width: 100%;
 }
 #nav_container form{
@@ -48,12 +46,14 @@ body{
 }
 
 #nav_container input[type="text"]{
- height: 30px;
-  width: 80%;
-    margin-top: 5px;
-    border-radius: 3px;
-	
-	}
+ /*height: 30px;*/
+  /*  margin-top: 5px;
+    border-radius: 3px;*/
+  border: 1px solid #e5e5e5;
+  padding: 5px;
+	width: 80%;
+	background-color: #fff;
+}
 
 #nav_container input[type="submit"]{
 	
@@ -68,20 +68,26 @@ body{
 	width: 17%;
 }
 
-#logo{
-	margin: 0px;
+.logo{
+	padding: 0;
 }
 
 #logo h2{
-	font-size: 40px;;
+	font-size: 30px;
 	color: orange;
 	text-align: center;
-	 margin: 0px;
+	 margin-top: 10px;
+	 font-weight: bold;
 	
 }
 
+.search_form{
+	display: inline-block;
+	float: left;
+}
+
 .menu_links{
-	padding: 20px 0;
+	padding-top: 10px;
 }
 
 .homes{
