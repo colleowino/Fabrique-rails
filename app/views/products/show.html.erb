@@ -1,3 +1,5 @@
+<div class= "container" id="login_container" style="text-align: center;>
+
 <p id="notice"><%= notice %></p>
 <p>
 
@@ -52,3 +54,5 @@
 <h3>Comments (<%= @product.comments.size %>)</h3>
 <%= render partial: 'products/comment', collection: @product.comments %>
 <%= render partial: 'comments/form' %>
+
+</div>
