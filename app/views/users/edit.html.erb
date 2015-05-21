@@ -1,6 +1,118 @@
-<h1>Editing User</h1>
+<div class="container">
+        <h1 class="page-header">Edit Profile</h1>
 
-<%= render 'form' %>
+<div class="row">
+
+      <%= form_for(@user) do |f| %>
+        
+
+
+          <!-- left column -->
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="text-center">
+              <%= image_tag @user.avatar.url, :class =>'avatar img-circle img-thumbnail' %>
+              <h6>Upload a different photo...</h6>
+              <%= f.file_field :avatar, :class => "text-center center-block well well-sm"%>
+            </div>
+          </div>
+          
+           <!-- edit form column -->
+          <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+
+                <div class="alert alert-info alert-dismissable">
+					                  <% if @user.errors.any? %>
+					    <div id="error_explanation">
+					      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+					      <ul>
+					      <% @user.errors.full_messages.each do |message| %>
+					        <li><%= message %></li>
+					      <% end %>
+					      </ul>
+					    </div>
+					  <% end %>
+
+                </div>
+
+                <h3>Personal info</h3>
+
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label class="col-lg-3 control-label">First name:</label>
+                    <div class="col-lg-8">
+                       <%= f.text_field :first_name, :class=>"form-control"%>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label class="col-lg-3 control-label">Last name:</label>
+                    <div class="col-lg-8">
+                       <%= f.text_field :last_name, :class=>"form-control" %>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-lg-3 control-label">Location:</label>
+                    <div class="col-lg-8">
+                      <%= f.text_field :location, :class=>"form-control" %>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-lg-3 control-label">Email:</label>
+                    <div class="col-lg-8">
+                     <%= f.email_field :email, autofocus: true, :class=>"form-control" %>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-lg-3 control-label">Password:</label>
+                    <div class="col-lg-8">
+                      <%= f.password_field :password, autocomplete: "off" ,placeholder: "leave blank if you don't want to change it", :class=>"form-control"%>
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label class="col-lg-3 control-label">Confirm Password:</label>
+                    <div class="col-lg-8">
+                      <%= f.password_field :password_confirmation, autocomplete: "off", :class=>"form-control" %>
+                    </div>
+
+                   </div>
+
+                   <div class="form-group">
+                    <label class="col-lg-3 control-label">Current Password:</label>
+                    <div class="col-lg-8">
+                    <%= f.password_field :current_password, autocomplete: "off", :class=>"form-control" %>
+                    </div>
+
+                   </div>
+            
+                  
+                  <div class="form-group">
+                    <label class="col-md-3 control-label"></label>
+                    <div class="col-md-8">
+                      <%= f.submit "Update", :class=>"btn btn-primary"%>
+
+                      </div>
+                  </div>
+               
+                </form>
+          </div>
+        <% end %>
+
+       <div>
+
+      
+
+      <%= link_to "Back", :back %>
+       </div>
+   </div>      
+      
+ </div><!--row-->
+     
+</div>
+
+
 
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>
