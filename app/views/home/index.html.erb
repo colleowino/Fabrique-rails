@@ -1,0 +1,44 @@
+<!-- <p id="notice"><%= notice %></p> -->
+
+<div class="container" >
+
+     <div class="row shadow">
+
+            <div class="col-md-6" id="home1">
+               <h2> Get the look you want without the hassle.
+              </h2>
+          
+            </div>
+
+            <div class="col-md-6" id="homes"></div>
+    </div>
+</div>
+
+
+<div class="container">
+  <div class="row products shadow">
+
+    <% @products.each do |product| %>
+      
+       <div class="col-md-4 product">
+        <% if product.image.exists? %>
+        <%= image_tag product.image ,:class => 'main_img'%>
+        <% end %>
+       
+        <!-- <p><%= product.price %></p>
+        
+        <p><%= product.status %></p> -->
+       
+        <p><%= link_to 'Show', product %></p>
+        
+
+      </div>
+
+    <% end %>
+
+  </div>
+</div>
+
+
+
+
