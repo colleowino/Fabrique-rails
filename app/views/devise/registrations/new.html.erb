@@ -39,7 +39,7 @@
 
   <div class="field">
     <%= f.label :avatar,  :class => "label" %><br>
-    <%= f.text_field :avatar, :class => "texty", :placeholder => "Image Url" %>
+    <%= f.file_field :avatar, :class => "texty", :placeholder => "Upload image" %>
   </div>
 
 
@@ -54,3 +54,6 @@
 </div>
 <%= render "devise/shared/links" %>
 </div>
+
+
+
