@@ -13,5 +13,8 @@ Rails.application.routes.draw do
   end
   
 
-  root to: 'products#index'
+  get 'home' => 'home#index'
+
+  root 'home#index'
+  
 end
