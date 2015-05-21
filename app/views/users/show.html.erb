@@ -1,6 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+
+
+
+<p><%= image_tag @user.avatar.url, :class => 'main_img'%></p>
+
+
+</p>
+
+
+<p>
   <strong>First name:</strong>
   <%= @user.first_name %>
 </p>
@@ -20,10 +30,6 @@
   <%= @user.location %>
 </p>
 
-<p>
-  <strong>Avatar url:</strong>
-  <%= @user.avatar_url %>
-</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

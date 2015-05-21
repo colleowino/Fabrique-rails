@@ -17,10 +17,7 @@
     <%= f.text_field :location, :class => "texty", :placeholder => "Location" %>
   </div>
 
-  <div class="field">
-    <%= f.label :avatar_url,  :class => "label" %><br>
-    <%= f.text_field :avatar_url, :class => "texty", :placeholder => "Image Url" %>
-  </div>
+  
 
   <div class="field">
     <%= f.label :email,  :class => "label" %><br />
@@ -38,6 +35,11 @@
   <div class="field">
     <%= f.label :password_confirmation,  :class => "label" %><br />
     <%= f.password_field :password_confirmation, :class => "texty", autocomplete: "off", :placeholder => "Confirm Password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :avatar,  :class => "label" %><br>
+    <%= f.text_field :avatar, :class => "texty", :placeholder => "Image Url" %>
   </div>
 
 
