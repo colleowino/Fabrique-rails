@@ -46,6 +46,15 @@
   <%= f.file_field :image %>
   </div>
 
+<div class="control-group">
+    <%= f.label :url, :class => 'control-label' %>
+    <div class="controls">
+     
+      <%= file_field_tag "urls[]", type: :file, multiple: true %>
+    </div>
+  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
